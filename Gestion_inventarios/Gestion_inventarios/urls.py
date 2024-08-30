@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Gestion_inventarios.views import login,Caja,Calendario,Inicio,Itinerario,Provedores
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',login),
+    path('caja/',Caja),
+    path('calendario/',Calendario),
+    path('inicio/',Inicio),
+    path('itinerario/',Itinerario),
+    path('provedores/',Provedores),
 ]

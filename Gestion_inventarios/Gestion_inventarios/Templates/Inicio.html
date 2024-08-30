@@ -1,0 +1,53 @@
+{% extends "Padre.html" %}
+{% load static %}
+{% block head %}
+<link href="{% static "css/inicio.css" %}" rel="stylesheet" type="text/css">
+<title>INICIO</title>
+{% endblock head %}
+
+
+{% block body %}
+<div class="Frame19" style="width: 1215px; height: 498.15px; flex-direction: column; justify-content: center; align-items: center; gap: 100px; display: inline-flex">
+  <div class="Titulo" style="padding-left: 25px; padding-right: 25px; padding-top: 7px; padding-bottom: 7px; background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 50px; justify-content: flex-start; align-items: center; gap: 100px; display: inline-flex">
+    <div class="PanelDeAdministraccion" style="color: white; font-size: 57px; font-family: Roboto; font-weight: 400; line-height: 64px; word-wrap: break-word">PANEL DE ADMINISTRACCION</div>
+    <div class="Search" style="width: 46px; height: 38.82px; position: relative">
+      <div class="BoundingBox" style="width: 46px; height: 38.82px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
+      <div class="Search" style="width: 34.50px; height: 29.11px; left: 5.75px; top: 4.85px; position: absolute; background: white"></div>
+    </div>
+  </div>
+  <div class="Frame7" style="justify-content: center; align-items: center; gap: 40px; display: inline-flex">
+    <button class="Opcion1">
+      <div class="Frame8" style="padding: 25px; background: #06123C; border-radius: 100px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+        <div class="PointOfSale" style="width: 60px; height: 60px; background: white"></div>
+      </div>
+      <div class="Frame1" style="padding-left: 25px; padding-right: 25px; background: white; border-radius: 50px; justify-content: center; align-items: center; display: inline-flex">
+        <div class="Caja" style="color: #06123C; font-size: 36px; font-family: Roboto; font-weight: 400; line-height: 44px; word-wrap: break-word">CAJA</div>
+      </div>
+    </button>
+    <button class="Opcion2">
+      <div class="Frame8" style="padding: 25px; background: #06123C; border-radius: 100px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex">
+        <div class="Inventory" style="width: 60px; height: 55.03px; background: #D9D9D9"></div>
+      </div>
+      <div class="Frame1" style="padding-left: 25px; padding-right: 25px; background: white; border-radius: 50px; justify-content: center; align-items: center; display: inline-flex">
+        <div class="Inventario" style="color: black; font-size: 36px; font-family: Roboto; font-weight: 400; line-height: 44px; word-wrap: break-word">INVENTARIO</div>
+      </div>
+    </button>
+    <button class="Opcion3">
+      <div class="Frame8" style="padding: 25px; background: #06123C; border-radius: 100px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: flex">
+        <div class="LocalShipping" style="width: 60px; height: 55.03px; background: #D9D9D9"></div>
+      </div>
+      <div class="Frame1" style="padding-left: 25px; padding-right: 25px; background: white; border-radius: 50px; justify-content: center; align-items: center; display: inline-flex">
+        <div class="Provedor" style="color: black; font-size: 36px; font-family: Roboto; font-weight: 400; line-height: 44px; word-wrap: break-word">PROVEDOR</div>
+      </div>
+    </dibuttonv>
+    <button class="Opcion4">
+      <div class="Frame8" style="padding: 25px; background: #06123C; border-radius: 100px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+        <div class="CalendarMonth" style="width: 60px; height: 61.15px; background: #D9D9D9"></div>
+      </div>
+      <div class="Frame1" style="padding-left: 25px; padding-right: 25px; background: white; border-radius: 50px; justify-content: center; align-items: center; display: inline-flex">
+        <div class="Calendario" style="color: black; font-size: 36px; font-family: Roboto; font-weight: 400; line-height: 44px; word-wrap: break-word">CALENDARIO</div>
+      </div>
+    </button>
+  </div>
+</div>
+{% endblock body %}
