@@ -1,0 +1,105 @@
+.Titulo {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 100px;
+    display: inline-flex
+}
+.Frame20 {
+    width: 899px;
+    height: 603px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 86px;
+    display: inline-flex
+}
+.Caja{
+    color: white;
+    font-size: 57px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 64px;
+    word-wrap: break-word
+}
+#search {
+    font-size: 46px;
+    left: 5.75px;
+    top: 4.85px;
+    color: white
+}
+.Resumen {
+    align-self: stretch;
+    color: black;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    word-wrap: break-word
+}
+.Frame7 {
+    width: 500px;
+    height: 200px;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: inline-flex;
+    color: black;
+    font-size: 45px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 52px;
+    word-wrap: break-word
+}
+.VTotal {
+    color: black;
+    font-size: 45px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 52px;
+    word-wrap: break-word
+}
+.panel {
+    align-self: stretch;
+    padding: 20px;
+    background: rgba(115.50, 179.46, 213.90, 0.50);
+    border-radius: 20px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex
+}
+.Frame8 {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex
+}
+.Total {
+    color: black;
+    font-size: 45px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 52px;
+    word-wrap: break-word
+}
+.Numero {
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; display: flex
+}

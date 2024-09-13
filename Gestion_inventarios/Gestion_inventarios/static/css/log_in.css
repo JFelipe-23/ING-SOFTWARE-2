@@ -1,4 +1,4 @@
-#Frame6 {
+.Frame6 {
     width: 393px;
     height: 467.67px;
     padding: 50px;
@@ -11,7 +11,7 @@
     gap: 50px;
     display: inline-flex
 }
-#User {
+.User {
     padding: 25px;
     background: #06123C;
     border-radius: 100px;
@@ -21,27 +21,27 @@
     gap: 10px;
     display: flex
 }
-#Inputs {
+.Inputs {
     flex-direction: column; 
     justify-content: flex-start;
     align-items: flex-start;
     gap: 23px;
     display: flex
 }
-#email {
+.email {
     align-self: stretch;
     justify-content: flex-start;
     align-items: center;
     display: inline-flex
 }
-#Frame11 {
+.Frame11 {
     padding: 10px;
     background: #06123C;
     justify-content: flex-start;
     align-items: center;
     display: flex
 }
-#Email {
+.Email {
     width: 238px;
     height: 100%;
     padding-left: 10px;
@@ -50,19 +50,19 @@
     align-items: center;
     display: flex
 }
-#password {
+.password {
     justify-content: center;
     align-items: center; 
     display: inline-flex
 }
-#Lock {
+.Lock {
     padding: 10px;
     background: #06123C;
     justify-content: center;
     align-items: center;
     display: flex
 }
-#Password {
+.Password {
     width: 238px;
     height: 100%;
     padding-left: 10px;
@@ -71,7 +71,7 @@
     align-items: center;
     display: flex
 }
-#Botones {
+.Botones {
     justify-content: center;
     align-items: center;
     gap: 58px;

@@ -9,7 +9,8 @@ def Itinerario(request):
     return render(request,'Itinerario.html')
 
 def Caja(request):
-    return render(request,'caja.html')
+    context = {'options': [ "Selecciona una opción" ,"1000612414","197567645","324465676"]}
+    return render(request,'caja.html',context)
 
 def Calendario(request):
     return render(request,'calendario.html')
