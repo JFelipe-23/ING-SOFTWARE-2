@@ -62,7 +62,7 @@ ROOT_URLCONF = 'Gestion_inventarios.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/JuanF/Desktop/Git/ING-SOFTWARE-2/Gestion_inventarios/Gestion_inventarios/Templates'],
+        'DIRS': ['C:/Users/Yamile/Desktop/GIT/ING-SOFTWARE-2/Gestion_inventarios/Gestion_inventarios/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

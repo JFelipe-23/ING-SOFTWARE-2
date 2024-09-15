@@ -34,33 +34,56 @@
     top: 4.85px;
     color: white
 }
-.Resumen {
-    align-self: stretch;
+.Frame3{
+    padding: 50px;
+    background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%);
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    display: flex
+}
+.Producto {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex
+}
+.Vendedor{
     color: black;
-    font-size: 14px;
-    font-family: Roboto;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: 0.10px;
+    font-size: 36px;
+    font-family: Roboto; 
+    font-weight: 400;
+    line-height: 44px;
     word-wrap: break-word
 }
+select{
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex
+}
+#section1{
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    display: inline-flex
+}
 .Frame7 {
-    width: 500px;
-    height: 200px;
+    min-width: 500px;
+    min-height: 200px;
     padding: 25px;
     background: white;
     border-radius: 20px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content:flex-start;
     align-items: center;
     gap: 20px;
-    display: inline-flex;
-    color: black;
-    font-size: 45px;
-    font-family: Roboto;
-    font-weight: 400;
-    line-height: 52px;
-    word-wrap: break-word
+    display: inline-flex
 }
 .VTotal {
     color: black;
@@ -70,8 +93,9 @@
     line-height: 52px;
     word-wrap: break-word
 }
-.panel {
-    align-self: stretch;
+.Panel {
+    width: 460px;
+    height: 270px;
     padding: 20px;
     background: rgba(115.50, 179.46, 213.90, 0.50);
     border-radius: 20px;
@@ -96,10 +120,48 @@
     word-wrap: break-word
 }
 .Numero {
+    background: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex
+}
+.Num {
+    padding: 10px;
+    color: black;
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 52px;
+    word-wrap: break-word
+}
+.Botones{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: inline-flex
+}
+.input{
+    text-align: center
+}
+input {
     padding: 10px;
     background: white;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    gap: 10px; display: flex
+    gap: 10px;
+    display: inline-flex
+}
+button{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 25px;
+    justify-content: center; 
+    align-items: center;
 }
