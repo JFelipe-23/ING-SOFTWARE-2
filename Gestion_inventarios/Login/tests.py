@@ -1,5 +1,5 @@
 from django.test import TestCase
-
+from .models import User
 # Create your tests here.
 
 class Login_tests(TestCase):
@@ -21,8 +21,8 @@ class Login_tests(TestCase):
 #---------------------------------------------------------------------------------------
     def test_cambiar_usuario(self):
         # Cambiar usuario y verificar autenticación
-        self.user.cambiar_usuario("NuevoPato")
-        resultado = self.user.autenticar("NuevoPato", "contraseña123")
+        self.user.cambiar_usuario("David18")
+        resultado = self.user.autenticar("David18", "contraseña18")
         self.assertEqual(resultado, "Autenticación exitosa")
 
 
