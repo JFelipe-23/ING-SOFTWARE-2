@@ -2,17 +2,15 @@ from django.db import models
 
 # Create your models here.
 
-
-
 # Caja
-class Caja(models.Model):
-    total_caja = models.DecimalField(max_digits=10, decimal_places=2)
-    fecha = models.DateField(auto_now_add=True)
+#class Caja(models.Model):
+    
 
-    def __str__(self):                         #TERMINAR
+                            #TERMINAR
         
 #-----------------------------------------------------------------------------------
 # Inventario
+
 class Inventario(models.Model):
     nombre_producto = models.CharField(max_length=100)
     cantidad = models.IntegerField()
@@ -22,6 +20,7 @@ class Inventario(models.Model):
         return self.nombre_producto
 #-----------------------------------------------------------------------------------
 # poveedor
+
 class Proveedor(models.Model):
     nombre = models.CharField(max_length=20)
     contacto = models.CharField(max_length=10)               #TERMINAR
@@ -30,5 +29,8 @@ class Proveedor(models.Model):
         return self.nombre
 #-----------------------------------------------------------------------------------
 # Calendario
+
 class Calendario(models.Model):
     evento = models.CharField(max_length=200)                #TERMINAR
+
+    
