@@ -5,7 +5,7 @@ class Proovedor (models.Model):
     Nombre=models.CharField(max_length=150)
     Direccion=models.CharField(max_length=200)
     Telefono=models.CharField(max_length=50)
-    ID=models.IntegerField(max_length=10)
+    ID=models.IntegerField(primary_key=True)
     Productos= models.ForeignKey(Product)
 
     def __str__(self):
