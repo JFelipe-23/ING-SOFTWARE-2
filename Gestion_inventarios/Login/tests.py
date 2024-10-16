@@ -4,12 +4,12 @@ from models import User
 
 
 
-class UserModelTest(TestCase):
+class UserTest(TestCase):
 
     def setUp(self):
 
         self.user = User.objects.create(usuario="David17", contraseña="123456789")
-
+#--------------------------------------------------------------------------------------------------
     def test_autenticacion_exitosa(self):
         resultado = self.user.autenticar("David17", "123456789")
         self.assertEqual(resultado, "Autenticación exitosa")
@@ -23,7 +23,7 @@ class UserModelTest(TestCase):
         self.user.refresh_from_db() 
         self.assertEqual(self.user.contraseña, "987654321")
 
-        resultado = self.user.autenticar("Pato", "987654321")
+        resultado = self.user.autenticar("David17", "987654321")
         self.assertEqual(resultado, "Autenticación exitosa")
 #--------------------------------------------------------------------------------------------------
     def test_cambiar_usuario(self):
