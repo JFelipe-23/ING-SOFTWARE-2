@@ -87,6 +87,29 @@
         </div>
       </button>
     </a>
+    <a href="http://127.0.0.1:8000/admin/">
+      <button class="Opcion">
+        <div class="Frame8">
+          <div class="CalendarMonth">
+            <span class="material-symbols-outlined" id="icon">
+              shield_person
+            </span>
+          </div>
+        </div>
+        <div class="Frame1">
+          <div class="texto">
+            ADMIN
+          </div>
+        </div>
+      </button>
+    </a>
   </div>
+  <form method="post">
+    {% csrf_token %}
+    <button class="LogOut" type="submit">
+      <div class="texto">
+        LOG OUT
+      </div>
+    </button>
 </div>
 {% endblock body %}

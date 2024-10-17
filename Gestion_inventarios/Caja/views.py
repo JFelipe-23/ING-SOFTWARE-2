@@ -2,10 +2,12 @@ from django.shortcuts import render
 from django.db import connection
 from .models import Product
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 ListaPraductos = []
 Total = 0
 
+@login_required(login_url="/logIn/")
 def Caja(request):
     if request.method == 'POST' and 0 == len(ListaPraductos):
         consulta_seleccionada = request.POST.get('consulta')

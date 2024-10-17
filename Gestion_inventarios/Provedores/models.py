@@ -1,21 +1,18 @@
 from django.db import models
-from Gestion_inventarios import Product
 
 class Proovedor (models.Model):
     Nombre=models.CharField(max_length=150)
     Direccion=models.CharField(max_length=200)
     Telefono=models.CharField(max_length=50)
-    ID=models.IntegerField(primary_key=True)
-    Productos= models.ForeignKey(Product)
+    Codigo_Provedor=models.IntegerField(primary_key=True)
 
     def __str__(self):
-        return f"Proveedor: {self.nombre}\n
-        Dirección: {self.direccion}\n
-        Teléfono: {self.telefono}\n
-        Productos: {self.productos}"
-    
-    def __str__(self):
-        return f"Productos: {self.Productos}"
+        txt = ""
+        txt += f"Proveedor: {self.nombre}\n"
+        txt += f"Dirección: {self.direccion}\n"
+        txt += f"Teléfono: {self.telefono}\n"
+        txt += f"Productos: {self.productos}"
+        return txt
 
     def agregar_producto(self, Productos):
         self.productos.append(Productos)

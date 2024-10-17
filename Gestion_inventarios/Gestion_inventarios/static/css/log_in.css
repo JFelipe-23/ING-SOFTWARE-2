@@ -41,7 +41,7 @@
     align-items: center;
     display: flex
 }
-.Email {
+.username {
     width: 238px;
     height: 100%;
     padding-left: 10px;
@@ -70,12 +70,6 @@
     justify-content: flex-start;
     align-items: center;
     display: flex
-}
-.Botones {
-    justify-content: center;
-    align-items: center;
-    gap: 58px;
-    display: inline-flex
 }
 button {
     padding: 10px;

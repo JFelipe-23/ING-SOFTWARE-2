@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Caja.views import Caja
-from Login.views import login
+from Login.views import login_view
 from Calendario.views import Calendario
 from Inicio.views import Inicio
 from Itinerario.views import Itinerario
@@ -25,10 +25,10 @@ from Provedores.views import Provedores
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',login),
+    path('logIn/',login_view),
     path('caja/',Caja),
     path('calendario/',Calendario),
-    path('inicio/',Inicio),
+    path('',Inicio),
     path('itinerario/',Itinerario),
     path('provedores/',Provedores),
 ]
