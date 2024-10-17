@@ -1,17 +1,22 @@
 {% extends "Padre.html" %}
 {% load static %}
 {% block head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 <title>CALENDARIO</title>
 {% endblock head %}
 
 
 {% block body %}
-<div class="Titulo" style="width: 466px; height: 66px; padding-left: 25px; padding-right: 25px; padding-top: 7px; padding-bottom: 7px; background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex">
-  <div class="Calendario" style="color: white; font-size: 45px; font-family: Roboto; font-weight: 400; line-height: 52px; word-wrap: break-word">CALENDARIO</div>
-  <div class="Search" style="width: 46px; height: 38.82px; position: relative">
-    <div class="BoundingBox" style="width: 46px; height: 38.82px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
-    <div class="Search" style="width: 34.50px; height: 29.11px; left: 5.75px; top: 4.85px; position: absolute; background: white"></div>
-    <iframe src="https://calendar.google.com/calendar/embed?src=e51560448ca9d7844ce20f8a86d7758881e675c4df33dceb60eadea940ca7944%40group.calendar.google.com&ctz=UTC" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<div style="display: flex; flex-direction: column; align-items: center">
+  <div class="Titulo" style="width: 466px; height: 66px; padding-left: 25px; padding-right: 25px; padding-top: 7px; padding-bottom: 7px; background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 50px; justify-content: center; align-items: center; gap: 100px; display: inline-flex">
+    <div class="Calendario" style="color: white; font-size: 45px; font-family: Roboto; font-weight: 400; line-height: 52px; word-wrap: break-word">CALENDARIO</div>
+    <div class="Search" style="width: 46px; height: 38.82px; position: relative">
+      <span class="material-symbols-outlined" style="font-size: 46px; left: 5.75px; top: 4.85px; color: white">
+        search
+      </span>
+    </div>
   </div>
+  <p></p>
+  <iframe src="https://calendar.google.com/calendar/embed?src=e51560448ca9d7844ce20f8a86d7758881e675c4df33dceb60eadea940ca7944%40group.calendar.google.com&ctz=UTC" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 {% endblock body %}
