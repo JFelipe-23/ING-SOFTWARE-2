@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
-@login_required(login_url="/logIn/")
+@login_required(login_url="/login/")
 def Provedores(request):
     return render(request,'provedor.html')

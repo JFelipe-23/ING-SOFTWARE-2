@@ -21,61 +21,14 @@
     gap: 10px;
     display: flex
 }
-.Inputs {
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 23px;
-    display: flex
-}
-.email {
-    align-self: stretch;
-    justify-content: flex-start;
-    align-items: center;
-    display: inline-flex
-}
-.Frame11 {
-    padding: 10px;
-    background: #06123C;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex
-}
-.username {
-    width: 238px;
-    height: 100%;
-    padding-left: 10px;
-    background: rgba(6, 18, 60, 0.50);
-    justify-content: flex-start;
-    align-items: center;
-    display: flex
-}
-.password {
-    justify-content: center;
-    align-items: center; 
-    display: inline-flex
-}
-.Lock {
-    padding: 10px;
-    background: #06123C;
-    justify-content: center;
-    align-items: center;
-    display: flex
-}
-.Password {
-    width: 238px;
-    height: 100%;
-    padding-left: 10px;
-    background: rgba(6, 18, 60, 0.50);
-    justify-content: flex-start;
-    align-items: center;
-    display: flex
-}
 button {
+    color: white;
     padding: 10px;
     background: black;
     border-radius: 25px;
     justify-content: center;
     align-items: center;
-    display: flex
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
