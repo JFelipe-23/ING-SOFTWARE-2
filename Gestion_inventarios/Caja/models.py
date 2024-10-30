@@ -1,33 +1,29 @@
 from django.db import models
-from Login.models import Vendedor, Proveedor
+from Login.models import Empleado
+from Provedores.models import Proveedor
+
 
 class Producto(models.Model):
-    isbn = models.CharField(max_length=13, primary_key=True)
+    isbn = models.CharField(max_length=20, unique=True, primary_key=True)
     nombre = models.CharField(max_length=100)
     cantidad = models.IntegerField()
     descuento = models.DecimalField(max_digits=5, decimal_places=2)
+    proveedor = models.ManyToManyField(Proveedor)
     precio_base = models.DecimalField(max_digits=10, decimal_places=2)
-    precio_final = models.DecimalField(max_digits=10, decimal_places=2)
-    proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE, related_name='productos')
+    precio_final = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
 
-    def __str__(self):
-        return f"Producto: {self.nombre} - {self.isbn}"
+    def save(self, *args, **kwargs):
+        if self.descuento==0:
+            self.precio_final=self.precio_base
+        else:
+            self.precio_final = self.precio_base-((self.precio_base * self.descuento) / 1)
+        super(Producto, self).save(*args, **kwargs)
+    
+    def __str__(self) -> str:
+        return f"{self.nombre}"
 
 class Pedido(models.Model):
-    id = models.AutoField(primary_key=True)
-    fecha = models.DateField()
-    total_del_pedido = models.DecimalField(max_digits=10, decimal_places=2)
-    medio_de_pago = models.CharField(max_length=50)
-    vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE, related_name='pedidos')
-    productos = models.ManyToManyField(Producto, through='PedidoProducto')
-
-    def __str__(self):
-        return f"Pedido ID: {self.id} - {self.fecha}"
-
-class PedidoProducto(models.Model):
-    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    cantidad = models.IntegerField()
-
-    def __str__(self):
-        return f"Pedido {self.pedido.id} - Producto {self.producto.isbn}"
+    fecha = models.DateTimeField(auto_now_add=True)
+    total_pedido = models.DecimalField(max_digits=10, decimal_places=2)
+    productos = models.ManyToManyField(Producto)
+    vendedor = models.ForeignKey(Empleado, on_delete=models.CASCADE)

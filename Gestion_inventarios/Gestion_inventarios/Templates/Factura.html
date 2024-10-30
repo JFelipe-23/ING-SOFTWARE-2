@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <style>
+        /* Aquí puedes agregar tus estilos CSS para personalizar el diseño */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Factura</h1>
+
+    <div>
+        <b>Emisor:</b><br>
+        Empresa: 1234<br>
+        Direcion: direcion<br>
+        NIT: 123456789<br>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Precio unitario</th>
+                <th>Descuento</th>
+                <th>Precio Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lista in ListaPoductos %}
+            <tr>
+                <td>{{lista.nombre}}</td>
+                <td>{{lista.precio_base}}</td>
+                <td>{{lista.descuento}}</td>
+                <td>{{lista.precio_final}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><b>Total:</b></td>
+                <td>{{Total}}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p><b>Fecha de emisión: </b>{{Fecha}}</p>
+
+    <p>Gracias por su compra.</p>
+</body>
+</html>

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Caja.views import Caja
+from Caja.views import Caja,Factura
 from Login.views import user_login,user_register
 from Calendario.views import Calendario
 from Inicio.views import Inicio
@@ -32,4 +32,5 @@ urlpatterns = [
     path('',Inicio),
     path('itinerario/',Itinerario),
     path('provedores/',Provedores),
+    path('Factura/',Factura)
 ]
