@@ -24,18 +24,19 @@ def Caja(request):
                 else:
                     messages.success(request,f"Cantidad insuficiente para el producto {producto.nombre}")
             except:
-                messages.success(request,f"Producto {producto.nombre} no encontrado")
+                messages.success(request, 'No hay este productos')
         elif opcion=="2":
-            try:
-                producto=ListaPoductos.pop()
+            pocicion=BuquedaEnLista(ListaPoductos,valor)
+            if pocicion!=None:
+                producto=ListaPoductos.pop(pocicion)
                 producto_db = Producto.objects.get(pk=producto.pk)
                 nueva_cantidad = producto_db.cantidad + 1
-                producto_db.cantidad = nueva_cantidad
+                producto_db.cantidad = nueva_cantidad    
                 producto_db.save()
-            except:
+            else:
                 messages.success(request, 'No hay productos para eliminar')
         elif opcion=="3":
-            ListaPoductos.clear()
+            limpiar(ListaPoductos)
         elif opcion=="4":
             try:
                 vendedor=Empleado.objects.get(cedula=cedula)
@@ -69,3 +70,19 @@ def crear_pedido(total_pedido, productos, vendedor):
     pedido.save()
 
     return pedido
+
+def BuquedaEnLista(ListaPoductos:list,isbn:str)->int:
+    contador=0
+    for lista in ListaPoductos:
+        if lista.pk==isbn:
+            return contador
+        else:
+            contador=contador+1
+
+def limpiar(ListaPoductos:list)->None:
+    for lista in ListaPoductos:
+        producto_db = Producto.objects.get(pk=lista.pk)
+        nueva_cantidad = producto_db.cantidad + 1
+        producto_db.cantidad = nueva_cantidad    
+        producto_db.save()
+    ListaPoductos.clear()

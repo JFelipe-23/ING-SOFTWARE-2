@@ -1,13 +1,11 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 from .models import Empleado
 
-class VendedorAdmin(UserAdmin):
-    list_display = ( 'email', 'first_name', 'last_name', 'cedula')
-    search_fields = ( 'email', 'first_name', 'last_name', 'cedula')
-    fieldsets = (
-        (None, {'fields': ('username', 'email', 'password')}),
-        ('Personal info', {'fields': ('first_name', 'last_name', 'cedula')}),
-    )
+# Personalización de la visualización en el admin
+class EmpleadoAdmin(admin.ModelAdmin):
+    list_display = ('cedula', 'email', 'first_name', 'last_name', 'cumpleanos')
+    search_fields = ('cedula', 'email', 'first_name', 'last_name')
+    list_filter = ('cumpleanos',)
 
-admin.site.register(Empleado, VendedorAdmin)
+# Registrando el modelo Empleado en el admin
+admin.site.register(Empleado, EmpleadoAdmin)
