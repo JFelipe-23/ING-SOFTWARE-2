@@ -53,7 +53,12 @@
         <form class="Form" method="POST">
           {% csrf_token %}
           <div class="input">
-            <input text="text" name="name" placeholder="Código de producto">
+            <select text="text" name="name" placeholder="Código de producto">
+              <option>---</option>
+              {% for producto in Productos %}
+              <option>{{producto.nombre}}</option>
+              {% endfor %}
+            </select>
           </div>
           <div class="Botones">
             <button class="add_circle" id="agregarProducto" name="consulta" value="1" type="submit">

@@ -8,7 +8,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     cantidad = models.IntegerField()
     descuento = models.DecimalField(max_digits=5, decimal_places=2)
-    proveedor = models.ManyToManyField(Proveedor)
+    proveedor = models.ForeignKey(Proveedor,on_delete=models.CASCADE)
     precio_base = models.DecimalField(max_digits=10, decimal_places=2)
     precio_final = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
 

@@ -1,46 +1,78 @@
 {% extends "Padre.html" %}
 {% load static %}
 {% block head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link href="{% static "css/inventario.css" %}" rel="stylesheet" type="text/css">
 <title>Inventario</title>
 {% endblock head %}
 
 
 {% block body %}
-<div class="Frame22" style="width: 500px; height: 552px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 86px; display: inline-flex">
-  <div class="Titulo" style="padding-left: 25px; padding-right: 25px; padding-top: 7px; padding-bottom: 7px; background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 50px; justify-content: flex-start; align-items: center; gap: 100px; display: inline-flex">
-    <div class="Inventario" style="color: white; font-size: 57px; font-family: Roboto; font-weight: 400; line-height: 64px; word-wrap: break-word">Inventario</div>
-    <div class="Search" style="width: 46px; height: 38.82px; position: relative">
-      <div class="BoundingBox" style="width: 46px; height: 38.82px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
-      <div class="Search" style="width: 34.50px; height: 29.11px; left: 5.75px; top: 4.85px; position: absolute; background: white"></div>
+<div class="Frame22" style="">
+  <div class="Titulo">
+    <div class="Inventario">Inventario</div>
+    <div class="search">
+      <span class="material-symbols-outlined" id="search">
+        search
+      </span>
     </div>
   </div>
-  <div class="Frame3" style="padding: 50px; background: linear-gradient(180deg, rgba(115.50, 179.46, 213.90, 0.50) 0%, rgba(102.56, 159.35, 189.93, 0.50) 35%, rgba(60.43, 93.89, 111.90, 0.50) 100%); border-radius: 20px; justify-content: center; align-items: center; display: inline-flex">
-    <div class="Panel" style="width: 400px; align-self: stretch; padding: 20px; background: rgba(102.56, 159.35, 189.93, 0.50); border-radius: 20px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: inline-flex">
-      <div class="Producto" style="justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-        <div class="Id" style="color: black; font-size: 36px; font-family: Roboto; font-weight: 400; line-height: 44px; word-wrap: break-word">ISBN</div>
-        <div class="Id" style="padding: 10px; background: white; border-radius: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-          <div style="color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word">54365354</div>
-        </div>
+  <div class="Frame3">
+    <div class="Panel">
+      <div class="Panel2">
+        <div class="texto">ISBN: {{producto_db.pk}}</div>
+        <form method="GET">
+          <div class="container">
+            <div class="inputs">
+              <input type="text" name="q" placeholder="Buscar por isbn">
+              <select text="text" name="categoria" placeholder="Código de producto">
+                <option>---</option>
+                {% for producto in Productos %}
+                <option>{{producto.nombre}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="buttones">
+              <button name="consulta" value="0" type="submit">
+                <span class="material-symbols-outlined" id="Icon">search</span>
+                <p class="TBoton">Buscar</p>
+              </button>
+              <button class="add_circle" id="agregarProducto" name="consulta" value="1" type="submit">
+                <span class="material-symbols-outlined" id="Icon">add_circle</span>
+                <p class="TBoton">Agregar</p>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="Producto" style="color: black; font-size: 36px; font-family: Roboto; font-weight: 400; line-height: 44px; word-wrap: break-word">Producto</div>
-      <div class="Botones" style="align-self: stretch; justify-content: center; align-items: center; gap: 20px; display: inline-flex">
-        <div class="ScanDelete" style="width: 60px; height: 60px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-          <div class="ScanDelete" style="width: 41.67px; height: 47.62px; background: #1C1B1F"></div>
-          <div class="Elminar" style="color: black; font-size: 11px; font-family: Roboto; font-weight: 500; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">Elminar</div>
-        </div>
-        <div class="Ver" style="width: 60px; height: 60px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-          <div class="Visibility" style="width: 41.67px; height: 28.41px; background: #1C1B1F"></div>
-          <div class="Ver" style="color: black; font-size: 11px; font-family: Roboto; font-weight: 500; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">Ver</div>
-        </div>
-        <div class="AddCircle" style="width: 60px; height: 60px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-          <div class="AddCircle" style="width: 41.67px; height: 41.67px; background: #1C1B1F"></div>
-          <div class="Agregar" style="color: black; font-size: 11px; font-family: Roboto; font-weight: 500; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">Agregar</div>
-        </div>
-        <div class="Update" style="width: 60px; height: 60px; padding: 3px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-          <div class="Update" style="width: 41.67px; height: 41.67px; background: #1C1B1F"></div>
-          <div class="Actualizar" style="color: black; font-size: 11px; font-family: Roboto; font-weight: 500; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">Actualizar</div>
-        </div>
-      </div>
+      {% if producto_db %}
+      <div class="texto">Producto: {{producto_db.nombre}}</div>
+      <table id="contenedor-campos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>nombre</th>
+                <th>cantidad</th>
+                <th>descuento</th>
+                <th>proveedor</th>
+                <th>precio_base</th>
+                <th>precio_final</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td class="Resumen">{{producto_db.pk}}<br></td>
+              <td class="Resumen">{{producto_db.nombre}}<br></td>
+              <td class="Resumen">{{producto_db.cantidad}}<br></td>
+              <td class="Resumen">{{producto_db.descuento}}<br></td>
+              <td class="Resumen">{{producto_db.proveedor}}<br></td>
+              <td class="Resumen">{{producto_db.precio_base}}<br></td>
+              <td class="Resumen">{{producto_db.precio_final}}<br></td>
+              <td><a href="{% url 'EditarProducto' producto_db.pk %}">Editar</a></td>
+          </tr>
+        </tbody>
+      </table>
+      {% endif %}
     </div>
   </div>
 </div>

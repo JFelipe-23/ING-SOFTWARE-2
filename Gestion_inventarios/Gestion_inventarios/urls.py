@@ -17,20 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Caja.views import Caja,Factura
-from Login.views import user_login,user_register
+from Login.views import user_login
 from Calendario.views import Calendario
 from Inicio.views import Inicio
-from Itinerario.views import Itinerario
-from Provedores.views import Provedores
+from Itinerario.views import Itinerario,NuevoProducto,EditarProducto
+from Provedores.views import Provedores,NuevoProvedor
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', user_login, name='login'),
-    path('register/', user_register, name='register'),
     path('caja/',Caja),
     path('calendario/',Calendario),
     path('',Inicio),
     path('itinerario/',Itinerario),
     path('provedores/',Provedores),
-    path('Factura/',Factura)
+    path('NuevoProducto/',NuevoProducto),
+    path('EditarProducto/<int:pk>/',EditarProducto, name="EditarProducto"),
+    path('NuevoProvedor/',NuevoProvedor)
 ]
