@@ -21,7 +21,7 @@ from Login.views import user_login
 from Calendario.views import Calendario
 from Inicio.views import Inicio
 from Itinerario.views import Itinerario,NuevoProducto,EditarProducto
-from Provedores.views import Provedores,NuevoProvedor
+from Provedores.views import Provedores,NuevoProvedor,EditarProvedor
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,5 +33,6 @@ urlpatterns = [
     path('provedores/',Provedores),
     path('NuevoProducto/',NuevoProducto),
     path('EditarProducto/<int:pk>/',EditarProducto, name="EditarProducto"),
-    path('NuevoProvedor/',NuevoProvedor)
+    path('NuevoProvedor/',NuevoProvedor),
+    path('EditarProveedor/<int:pk>/',EditarProvedor, name="EditarProveedor")
 ]

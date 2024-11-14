@@ -3,14 +3,14 @@
 {% block head %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link href="{% static "css/provedor.css" %}" rel="stylesheet" type="text/css">
-<title>PROVEDOR</title>
+<title>PROVEEDOR</title>
 {% endblock head %}
 
 
 {% block body %}
 <div class="Frame22">
     <div class="Titulo">
-        <div class="Inventario">Provedor</div>
+        <div class="Inventario">Proveedor</div>
         <div class="search">
             <span class="material-symbols-outlined" id="search">
                 search
@@ -29,6 +29,7 @@
             <button type="submit">Buscar</button>
         </form>
         <div class="Panel" style="flex-direction: column; justify-content: center; align-items: center; display: flex">
+            {% if productos %}
             <table id="contenedor-campos">
                 <thead>
                     <tr>
@@ -48,10 +49,12 @@
                     </tr>
                     {% endfor %}
                 </tbody>
-              </table>
+            </table>
+            <a href="{% url 'EditarProveedor' proveedor.pk %}">Editar Proveedor</a>
+            {% endif %}
         </div>
         <a href="http://127.0.0.1:8000/NuevoProvedor/">
-            <button class="add_circle" id="agregarProducto" name="consulta" value="1" type="submit">
+            <button class="add_circle" id="agregarProducto" name="consulta" type="submit">
                 <span class="material-symbols-outlined" id="Icon">add_circle</span>
                 <p class="TBoton">Agregar</p>
             </button>

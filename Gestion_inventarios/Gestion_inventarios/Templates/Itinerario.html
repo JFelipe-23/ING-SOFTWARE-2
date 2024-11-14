@@ -24,24 +24,24 @@
         <form method="GET">
           <div class="container">
             <div class="inputs">
-              <input type="text" name="q" placeholder="Buscar por isbn">
-              <select text="text" name="categoria" placeholder="Código de producto">
-                <option>---</option>
-                {% for producto in Productos %}
-                <option>{{producto.nombre}}</option>
-                {% endfor %}
-              </select>
-            </div>
-            <div class="buttones">
-              <button name="consulta" value="0" type="submit">
-                <span class="material-symbols-outlined" id="Icon">search</span>
-                <p class="TBoton">Buscar</p>
-              </button>
+              <div class="busqueda">
+                <div class="bloques">
+                  <input type="text" name="q" placeholder="Buscar por isbn">
+                  <select text="text" name="categoria" placeholder="Código de producto">
+                    <option>---</option>
+                    {% for producto in Productos %}
+                    <option>{{producto.nombre}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <button name="consulta" value="0" type="submit">
+                  <span class="material-symbols-outlined" id="Icon">search</span>
+                </button>
+              </div>
               <button class="add_circle" id="agregarProducto" name="consulta" value="1" type="submit">
                 <span class="material-symbols-outlined" id="Icon">add_circle</span>
                 <p class="TBoton">Agregar</p>
               </button>
-            </div>
           </div>
         </form>
       </div>

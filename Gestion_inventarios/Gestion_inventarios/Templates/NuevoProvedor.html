@@ -2,12 +2,13 @@
 {% load static %}
 {% block head %}
 <link href="{% static "css/log_in.css" %}" rel="stylesheet" type="text/css">
-<title>NUEVO PROVEDOR</title>
+<title>NUEVO PROVEEDOR</title>
 {% endblock head %}
 
 
 {% block body %}
 <div class="Frame6">
+    <h1>Nuevo Proveedor</h1>
     <form method="post">
         {% csrf_token %}
         {{ formulario.as_p }}

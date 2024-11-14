@@ -2,17 +2,17 @@
 {% load static %}
 {% block head %}
 <link href="{% static "css/log_in.css" %}" rel="stylesheet" type="text/css">
-<title>EDITAR PRODUCTO</title>
+<title>EDITAR PROVEEDOR</title>
 {% endblock head %}
 
 
 {% block body %}
 <div class="Frame6">
-    <h1>Editar Producto</h1>
+    <h1>Editar Proveedor</h1>
     <form method="post">
         {% csrf_token %}
         {{ formulario.as_p }}
-        <button type="submit">Guardar Cambios</button>
+        <button type="submit">Enviar</button>
     </form>
 </div>
 {% endblock body %}
