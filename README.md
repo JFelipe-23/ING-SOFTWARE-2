@@ -67,12 +67,32 @@ Bienvenido al manual de usuario de Gestion de inventarios, este documenta se dis
     1. Oprimir el boton agregar
     2. Rellenar todos los datos
     3. Oprimir el boton enviar
++   Editar proveedor
+    1. Oprimir el boton editar
+    2. Modificar los  datos del proveedor
+    3. Oprimir el boton enviar
 # Uso de Administrador
 1. Se loguea el trabajador con su repectiva cedula y contraseña
 2. Ingresa a Administrador
 +   Añadir un nuevo usuario
     1. Oprimir el boton añadir
     2. Rellenar con los datos del nuevo usuario y asignar permisos
+    3. Seleccionar el boton guardar
++   Editar usuario
+    1. Oprimir el boton modificar
+    2. Seleciona el usuario a modificar
+    3. Modificar los datos que desee
+    4. Oprimir el boton guardar
++   Eliminar usuario
+    1. Oprimir el boton modificar
+    2. Seleccion del usuario a eliminar
+    3. Oprimir el boton eliminar
++   Ver pedido
+    1. Seleccionar pedido
+    2. Se mostrara toda la lista de pedidos
+ 
+    
+ 
 
  
  
