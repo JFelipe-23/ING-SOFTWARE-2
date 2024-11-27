@@ -3,6 +3,8 @@ Trabajo Universidad Libre
 --------------------------------------------------------------------------------------------------------------
 La gestion de inventarios es una parte crucial de las operaciones empresariales, ya que permite mantener un control riguroso sobre los bienes y y productos, ayudando a optimizar los recursos y mejorando la toma de decisiones. 
 --------------------------------------------------------------------------------------------------------------
+Drive con todo el trabajo
+https://drive.google.com/drive/folders/1qGxT-iRR8sXG-leM7_HiqBL0_e8kvHFN?usp=sharing
 
 # Manual de Usuario
 Bienvenido al manual de usuario de Gestion de inventarios, este documenta se diseño buscando generar una guia completa de acuerdo al correcto uso de todas sus caracteristicas y funcionalidades, de esta manera facilitando su administracion.
